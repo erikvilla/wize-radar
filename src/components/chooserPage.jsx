@@ -10,46 +10,27 @@ import _ from 'lodash'
 export default class chooserPage extends Component {
   state = {
     activeItem: 'recommended',
-    attributes: [
-      {
-        name: 'Service Levels',
-        icon: 'service-levels',
-        id: 'SERVICE_LEVELS',
-        color: 'green',
-        teams: [
-          {name: 'Team Dow Jones', sentiments: [], health: []},
-          {name: 'Team Fox', sentiments: [], health: []},
-          {name: 'Team News OS', sentiments: [], health: []},
-        ]
-      },
-      {
-        name: 'Customer Centricity',
-        icon: 'customer-centricity',
-        id: 'CUSTOMER_CENTRICITY',
-        color: 'red',
-        teams: [
-          {name: 'Team NatGeo', sentiments: [], health: []},
-          {name: 'Team Roadmap', sentiments: [], health: []},
-          {name: 'Team Shape', sentiments: [], health: []},
-        ]
-      },
-    ]
-  }
-
-  handleItemClick = (e, {name}) => this.setState({activeItem: name})
-
-  mapActions () {
-    const selectedAttributes = [{
+    selectedAttributes: [{
       name: 'Customer Centricity',
       icon: 'customer-centricity',
       id: 'CUSTOMER_CENTRICITY'
     },
     {
-      name: 'service levels',
+      name: 'Service Levels',
       icon: 'service-levels',
       id: 'SERVICE_LEVELS'
-    }];
+    // },
+    // {
+    //   name: 'Tools And Processes',
+    //   icon: 'tools-and-processes',
+    //   id: 'TOOLS_AND_PROCESSES'
+    }]
+  }
 
+  handleItemClick = (e, {name}) => this.setState({activeItem: name})
+
+  mapActions () {
+    const selectedAttributes = this.state.selectedAttributes;
     axios.all([
       api.teams.getTeamHealthStatus({ teamId: 1 }),
       api.teams.getTeamHealthStatus({ teamId: 2 }),
@@ -86,6 +67,9 @@ export default class chooserPage extends Component {
 
   render () {
     const {activeItem} = this.state
+    const tables = _.map(this.state.attributes, (attribute) => {
+      return <ChooseTeam attributes={attribute} />
+    });
 
     return (
       <div>
@@ -101,10 +85,7 @@ export default class chooserPage extends Component {
 
         <Segment.Group>
 
-
-          <ChooseTeam attributes={this.state.attributes[0]} />
-
-          <ChooseTeam attributes={this.state.attributes[1]} />
+          { tables }
 
           <Segment textAlign='center' style={{backgroundColor: '#f2f3f7'}}>
             <Button size='huge' color='blue'>
