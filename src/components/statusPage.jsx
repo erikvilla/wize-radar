@@ -16,9 +16,7 @@ const statusPage = () => {
                 Team Status
               </Header.Content>
             </Header>
-            <Segment>
-              <Radar />
-            </Segment>
+            <HealthTable />
           </Grid.Column>
           <Grid.Column width={6}>
             <Header as='h1'>
@@ -28,7 +26,7 @@ const statusPage = () => {
               </Header.Content>
             </Header>
             <Segment>
-              <HealthTable />
+              <Radar />
             </Segment>
           </Grid.Column>
         </Grid.Row>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Menu, Image, Icon } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 import './LeftMenu.css'
 
 export default class TopMenuComponent extends Component {
@@ -13,7 +14,7 @@ export default class TopMenuComponent extends Component {
     return (
       <Menu icon vertical inverted fixed='left' id='LeftMenu'>
         <Menu.Item name='gamepad' active={activeItem === 'gamepad'} onClick={this.handleItemClick}>
-          <Image src='/wizeline.png' size='mini' />
+          <Link to='/'><Image src='/wizeline.png' size='mini' /></Link>
         </Menu.Item>
 
         <Menu.Item name='line chart' active={activeItem === 'line chart'} onClick={this.handleItemClick}>
