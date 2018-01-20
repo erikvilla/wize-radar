@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
 import { Button, Checkbox, Menu, Header, Icon, Image, Input, Segment, Table, Label } from 'semantic-ui-react'
-import ChooseTeamTable from './ChooseTeamTable'
 
 class HealthTable extends Component {
   constructor (props) {
@@ -20,7 +17,7 @@ class HealthTable extends Component {
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell />
-              <Table.HeaderCell textAlign='center' style={{width: '300px'}}>Attribute</Table.HeaderCell>
+              <Table.HeaderCell textAlign='center'>Attribute</Table.HeaderCell>
               <Table.HeaderCell textAlign='center'>Sep 17</Table.HeaderCell>
               <Table.HeaderCell textAlign='center'>Oct 17</Table.HeaderCell>
               <Table.HeaderCell textAlign='center'>Nov 17</Table.HeaderCell>
