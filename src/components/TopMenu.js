@@ -17,8 +17,9 @@ export default class TopMenuComponent extends Component {
             name='Team'
             active={activeItem === 'features'}
             onClick={this.handleItemClick}
+                     style={{ fontSize: '1.5em'}}
           >
-            My Team
+            NatGeo Team
           </Menu.Item>
         </Menu.Menu>
 
