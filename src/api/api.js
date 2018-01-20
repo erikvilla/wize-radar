@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 function api() {
-  const API_HOST = 'http://private-06d33-wizeradar.apiary-mock.com';
+  const API_HOST = 'https://private-06d33-wizeradar.apiary-mock.com';
   const headers = {
     Accept: 'application/json',
   };

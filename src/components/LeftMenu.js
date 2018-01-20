@@ -18,11 +18,11 @@ export default class TopMenuComponent extends Component {
         </Menu.Item>
 
         <Menu.Item name='line chart' active={activeItem === 'line chart'} onClick={this.handleItemClick}>
-          <Icon name='line chart' />
+          <Icon name='line chart' size='medium'/>
         </Menu.Item>
 
-        <Menu.Item name='video play' active={activeItem === 'video play'} onClick={this.handleItemClick}>
-          <Icon name='video play' />
+        <Menu.Item name='heartbeat' active={activeItem === 'heartbeat'} onClick={this.handleItemClick}>
+          <Icon name='heartbeat' />
         </Menu.Item>
       </Menu>
     )
