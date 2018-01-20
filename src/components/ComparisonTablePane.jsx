@@ -72,6 +72,11 @@ class ComparisonTablePane extends Component {
               </Grid.Row>
             </Grid>
           </Card.Content>
+          <Card.Content extra>
+            <div className='ui two buttons'>
+              <Button basic color='green'>filter</Button>
+            </div>
+          </Card.Content>
         </Card>
       </Card.Group>
     )
