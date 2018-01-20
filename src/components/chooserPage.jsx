@@ -1,11 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const chooserPage = () => {
-  return(
-    <div>
-      Choser here
-    </div>
-  )
+export default class chooserPage extends Component {
+
 };
-
-export default chooserPage;
