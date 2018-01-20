@@ -57,7 +57,6 @@ export default class chooserPage extends Component {
         });
 
         this.setState({ attributes: newStateAttributes });
-        console.log(newStateAttributes);
       }));
   }
 
