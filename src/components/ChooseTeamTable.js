@@ -21,18 +21,18 @@ class ChooseTeamTable extends Component {
 
   renderSentiment (sentiment) {
     switch(sentiment) {
-      case 'HAPPY': return ':)';
-      case 'MEH': return ':|';
-      case 'ANGRY': return ':(';
+      case 'HAPPY': return '😃';
+      case 'MEH': return '😶';
+      case 'ANGRY': return '😡';
     }
   }
 
   render () {
-    const sentimentRow = _.map(this.props.sentiments, (sentiment) => {
-      return <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>{this.renderSentiment(sentiment)} </span></Table.Cell>
+    const sentimentRow = _.map(this.props.sentiments, (sentiment, i) => {
+      return <Table.Cell textAlign='center' style={{fontSize: '2em'}} key={`sentiment-${i}`}><span>{this.renderSentiment(sentiment)} </span></Table.Cell>
     });
-    const healthRatings = _.map(this.props.health, (healthRating) => {
-      return <Table.Cell textAlign='center'><Image centered src={this.renderCircle(healthRating)} /></Table.Cell>;
+    const healthRatings = _.map(this.props.health, (healthRating, i) => {
+      return <Table.Cell textAlign='center' key={`health-${i}`}><Image centered src={this.renderCircle(healthRating)} /></Table.Cell>;
     });
 
     return (

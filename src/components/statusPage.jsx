@@ -11,7 +11,6 @@ const statusPage = () => {
         <Grid.Row>
           <Grid.Column width={10}>
             <Header as='h1'>
-              <Icon name='lock' />
               <Header.Content>
                 Team Status
               </Header.Content>
@@ -20,7 +19,6 @@ const statusPage = () => {
           </Grid.Column>
           <Grid.Column width={6}>
             <Header as='h1'>
-              <Icon name='lock' />
               <Header.Content>
                 Radar
               </Header.Content>

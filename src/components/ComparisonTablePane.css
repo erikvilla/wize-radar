@@ -1,0 +1,13 @@
+#comparison-cards .card.blue {
+  box-shadow: 0 0 0 1px #d4d4d5, 0 4px 0 0 #2185d0, 0 1px 3px 0 #d4d4d5;
+}
+
+#comparison-cards .card.red {
+  box-shadow: 0 0 0 1px #d4d4d5, 0 4px 0 0 #DB2828, 0 1px 3px 0 #d4d4d5;
+}
+#comparison-cards .card.green {
+  box-shadow: 0 0 0 1px #d4d4d5, 0 4px 0 0 #21BA45, 0 1px 3px 0 #d4d4d5;
+}
+#comparison-cards .card.orange {
+  box-shadow: 0 0 0 1px #d4d4d5, 0 4px 0 0 #F2711C, 0 1px 3px 0 #d4d4d5;
+}
