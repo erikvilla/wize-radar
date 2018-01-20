@@ -28,8 +28,8 @@ class ComparisonTablePane extends Component {
             </Grid>
           </Card.Content>
         </Card>
-        <Card fluid color='red'>
-          <Card.Content header='Fox News Team' as="Header" color='red' />
+        <Card fluid color='green'>
+          <Card.Content header='Self Service Team' as="Header" color='green' />
           <Card.Content desciption>
             <Grid centered columns={2}>
               <Grid.Row>
@@ -37,22 +37,7 @@ class ComparisonTablePane extends Component {
                   <Image src='/assets/oval-2.png' centered />
                 </Grid.Column>
                 <Grid.Column centered>
-                  <div role='img' aria-label='happy' style={{fontSize: '2em', textAlign: 'center'}}>😶</div>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
-          </Card.Content>
-        </Card>
-        <Card fluid color='green'>
-          <Card.Content header='Self Service Team' as="Header" color='green' />
-          <Card.Content desciption>
-            <Grid centered columns={2}>
-              <Grid.Row>
-                <Grid.Column style={{textAlign: 'center'}}>
-                  <Image src='/assets/triangle.png' centered />
-                </Grid.Column>
-                <Grid.Column centered>
-                  <div role='img' aria-label='happy' style={{fontSize: '2em', textAlign: 'center'}}>😡</div>
+                  <div role='img' aria-label='happy' style={{fontSize: '2em', textAlign: 'center'}}>😃</div>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
