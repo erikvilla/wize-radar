@@ -95,7 +95,6 @@ export default class Example extends React.Component {
               <XYPlot
                 yDomain={[0, 5]}
                 xDomain={[0, 5]}
-                onClick={this.generatePracticeDescription}
                 width={500}
                 height={500}>
                 <XAxis
