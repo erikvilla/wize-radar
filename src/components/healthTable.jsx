@@ -36,9 +36,9 @@ class HealthTable extends Component {
   }
 
   componentWillMount () {
-    api.teams.getTeamHealthStatus({ teamId: 1 })
+    api.teams.getTeamHealthStatus({ teamId: 2 })
       .then((response) => {
-        const checkpoints = response.data.checkpoints.slice(0, 5);
+        const checkpoints = response.data.checkpoints.slice(0, 5).reverse();
         this.setState({ checkpoints: checkpoints });
       });
   }
