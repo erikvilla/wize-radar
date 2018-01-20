@@ -11,9 +11,9 @@ export default class chooserPage extends Component {
   state = {
     activeItem: 'recommended',
     selectedAttributes: [{
-      name: 'Customer Centricity',
+      name: 'Service Mandate',
       icon: 'customer-centricity',
-      id: 'CUSTOMER_CENTRICITY'
+      id: 'SERVICE_MANDATE'
     },
     {
       name: 'Service Levels',
