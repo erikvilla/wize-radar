@@ -1,0 +1,184 @@
+{
+  "Standup": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Sprint Planning": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Sass": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "TDD": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Domain driven design": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice is not working because ...",
+      "meta": "Hold"
+    }
+  ],
+  "Integration testing": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Functional testing": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Unit testing": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "UX Workshops": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice is not working because ...",
+      "meta": "Hold"
+    }
+  ],
+  "Kubernetes": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "GCP": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Continuous deployment": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice fixed <problem> for us, we use it <where> <when> ...",
+      "meta": "Adopt"
+    }
+  ],
+  "Continuous Integration": [
+    {
+      "description": "We think this practice could help us ...",
+      "meta": "Assess"
+    },
+    {
+      "description": "This practice is working/not working because...",
+      "meta": "Trial"
+    },
+    {
+      "description": "This practice is not working because ...",
+      "meta": "Hold"
+    }
+  ]
+}

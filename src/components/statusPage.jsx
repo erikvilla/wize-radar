@@ -1,5 +1,5 @@
 import React from 'react'
-import Radar from './radar'
+import Radar from './radarSingle'
 import HealthTable from './healthTable'
 
 import { Divider, Dropdown, Grid, Header, Image, Icon, List, Menu, Segment } from 'semantic-ui-react'
@@ -9,7 +9,7 @@ const statusPage = () => {
     <div>
       <Grid>
         <Grid.Row>
-          <Grid.Column width={10}>
+          <Grid.Column width={9}>
             <Header as='h1'>
               <Header.Content>
                 Team Status
@@ -17,7 +17,7 @@ const statusPage = () => {
             </Header>
             <HealthTable />
           </Grid.Column>
-          <Grid.Column width={6}>
+          <Grid.Column width={7}>
             <Header as='h1'>
               <Header.Content>
                 Radar
@@ -25,17 +25,6 @@ const statusPage = () => {
             </Header>
             <Segment>
               <Radar />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={16}>
-            <Header as='h2'>
-              Timeline
-            </Header>
-
-            <Segment>
-
             </Segment>
           </Grid.Column>
         </Grid.Row>

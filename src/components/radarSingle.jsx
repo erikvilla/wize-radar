@@ -49,8 +49,8 @@ function generateData(rotation = 0) {
     {x: Math.random() * 6, y: Math.random() * (6 - 3 + 1), label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
     {x: Math.random() * 6, y: Math.random() * 3, label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
     {x: Math.random() * (6 - 3), y: Math.random() * 3, label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
-    {x: Math.random() * (5 - 3), y: Math.random() * 3, label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
-    {x: Math.random() * (6 - 3), y: Math.random() * (6 - 3), label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
+    {x: Math.random() * (5 - 3), y: Math.random() * (6 - 3), label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
+    {x: Math.random() * (6 - 3 + 1), y: Math.random() * 3, label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
     {x: Math.random() * (6 - 3 + 1), y: Math.random() * 3, label: practices[labelNumber()], size: 1, style:{fontSize: 9}, rotation:rotation},
   ];
 }
@@ -58,18 +58,12 @@ function generateData(rotation = 0) {
 export default class Example extends React.Component {
   state = {
     data: generateData(10),
-    data2: generateData(20),
-    data3: generateData(30),
-    data4: generateData(40),
     duration: 12,
   }
   handleChange = (e, { value }) => {
     this.setState({
       duration: value,
       data: generateData(10),
-      data2: generateData(20),
-      data3: generateData(30),
-      data4: generateData(40),
       practiceItems: null,
       itemTitle: null,
     })
@@ -119,47 +113,11 @@ export default class Example extends React.Component {
                   data={data}
                   color={DISCRETE_COLOR_RANGE[0]}
                   />
-                <MarkSeries
-                  className="mark-series-example"
-                  strokeWidth={2}
-                  sizeRange={[1, 5]}
-                  data={data2}
-                  color={DISCRETE_COLOR_RANGE[1]}
-                  />
-                  <MarkSeries
-                  className="mark-series-example"
-                  strokeWidth={2}
-                  sizeRange={[1, 5]}
-                  data={data3}
-                  color={DISCRETE_COLOR_RANGE[2]}
-                  />
-                  <MarkSeries
-                  className="mark-series-example"
-                  strokeWidth={2}
-                  sizeRange={[1, 5]}
-                  data={data4}
-                  color={DISCRETE_COLOR_RANGE[3]}
-                  />
                 <LabelSeries
                   animation
                   allowOffsetToBeReversed
                   data={data}
                   />
-                <LabelSeries
-                  animation
-                  allowOffsetToBeReversed
-                  data={data2}
-                />
-                <LabelSeries
-                  animation
-                  allowOffsetToBeReversed
-                  data={data3}
-                />
-                <LabelSeries
-                  animation
-                  allowOffsetToBeReversed
-                  data={data4}
-                />
                 <CircularGridLines
                   tickValues={[0, 1, 2, 3, 4, 5]}
                 />
@@ -168,21 +126,6 @@ export default class Example extends React.Component {
           <Grid.Column>
             <RadarDetail items={this.state.practiceItems} title={this.state.itemTitle} />
           </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Grid.Column>
-            <Form.Input
-              label={`Timeline `}
-              min={1}
-              max={12}
-              name='duration'
-              onChange={this.handleChange}
-              step={1}
-              type='range'
-              value={duration}
-            />
-          </Grid.Column>
-
         </Grid.Row>
       </Grid>
     );

@@ -1,0 +1,12 @@
+.font_color{
+  color: brown;
+}
+
+.title_checkbox {
+  padding-top: 2px;
+  margin-right: 5px;
+}
+
+.radar_header {
+  display: inline-block;
+}

@@ -20,17 +20,6 @@ const comparePage = () => {
             </Segment>
           </Grid.Column>
         </Grid.Row>
-        <Grid.Row>
-          <Grid.Column width={16}>
-            <Header as='h2'>
-              Timeline
-            </Header>
-
-            <Segment>
-
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
       </Grid>
     </div>
   )
