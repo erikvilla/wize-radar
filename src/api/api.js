@@ -20,10 +20,10 @@ export default {
     getTeams: config =>
       api().get(`/teams`, config),
     getTeam: config =>
-      api().get('/teams/${config.teamId}', config),
+      api().get(`/teams/${config.teamId}`, config),
     getTeamRadar: config =>
-      api().get('/teams/${config.teamId}/radar', config),
+      api().get(`/teams/${config.teamId}/radar`, config),
     getTeamHealthStatus: config =>
-      api().get('/teams/${config.teamId}/health-status', config),
+      api().get(`/teams/${config.teamId}/health-status`, config),
   },
 };
