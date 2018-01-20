@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import _ from 'lodash'
 
 import { Checkbox, Menu, Header, Icon, Image, Input, Segment, Table, Label } from 'semantic-ui-react'
 
@@ -10,7 +11,30 @@ class ChooseTeamTable extends Component {
 
   handleItemClick = (e, {name}) => this.setState({activeItem: name})
 
+  renderCircle (healthRating) {
+    switch(healthRating) {
+      case 'GREEN': return '/assets/oval-2.png';
+      case 'YELLOW': return '/assets/triangle.png';
+      case 'RED': return '/assets/rectangle.png';
+    }
+  }
+
+  renderSentiment (sentiment) {
+    switch(sentiment) {
+      case 'HAPPY': return ':)';
+      case 'MEH': return ':|';
+      case 'ANGRY': return ':(';
+    }
+  }
+
   render () {
+    const sentimentRow = _.map(this.props.sentiments, (sentiment) => {
+      return <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>{this.renderSentiment(sentiment)} </span></Table.Cell>
+    });
+    const healthRatings = _.map(this.props.health, (healthRating) => {
+      return <Table.Cell textAlign='center'><Image centered src={this.renderCircle(healthRating)} /></Table.Cell>;
+    });
+
     return (
       <Table celled>
         <Table.Header>
@@ -40,35 +64,17 @@ class ChooseTeamTable extends Component {
             <Table.Cell textAlign='center'>
               Sentiment
             </Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
-            <Table.Cell textAlign='center' style={{fontSize: '2em'}}><span>😃</span></Table.Cell>
+            {
+              sentimentRow
+            }
           </Table.Row>
           <Table.Row>
             <Table.Cell textAlign='center'>
               Health
             </Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
-            <Table.Cell textAlign='center'><Image centered src='/assets/oval-2.png' /></Table.Cell>
+            {
+              healthRatings
+            }
           </Table.Row>
         </Table.Body>
       </Table>
